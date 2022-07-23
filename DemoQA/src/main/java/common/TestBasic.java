@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TestBase {
+public class TestBasic {
 	public WebDriver driver;
 
 	public void openWebsite(String url) {
@@ -34,7 +34,7 @@ public class TestBase {
 		
 //		js.executeScript("arguments[0].scrollIntoView(true);", iframe);
 	}
-	public void zoomWidown () {
+	public void setWidown () {
 		Dimension dm= new Dimension(700,1000);
 		driver.manage().window().setSize(dm);
 	}
