@@ -134,7 +134,7 @@ public void selectStateOfCity(String inputStateAndCity) {
 		JavascriptExecutor js = (JavascriptExecutor) driverWeb;
 //		js.executeScript("window.scrollBy(0,50)");
 	}
-	public void get() {
+	public void dragAndDropPoint() {
 		WebElement element = driverWeb.findElement(By.id("currentAddress"));
 		int elementWidth= element.getSize().getWidth();
 		int elementHeight= element.getSize().getHeight();
