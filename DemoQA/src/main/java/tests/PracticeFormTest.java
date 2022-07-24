@@ -72,12 +72,12 @@ public class PracticeFormTest {
 				Assert.assertEquals(thanksForSubmittingPage.GetStateOfCityFromForm(),inputStateAndCity);
 			} */
 			//TC02:
-		/*	public void drapAnhDrop() {
+			public void drapAnhDrop() {
 				HomePage homePage = new HomePage(testBase.driver);
 				FormPage formPage = homePage.clickFormItem();
 				AutomationPracticeFormPage automationPracticeFormPage = formPage.clickOnFormItem();
-				automationPracticeFormPage.get();
-			}*/
+				automationPracticeFormPage.dragAndDropPoint();
+			}
 			//TC03: 
 			public void submitDataFail() {
 				HomePage homePage = new HomePage(testBase.driver);
