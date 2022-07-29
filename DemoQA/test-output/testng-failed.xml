@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.PracticeFormTest">
         <methods>
-          <include name="submitDataSuccessfully"/>
+          <include name="drapAnhDrop"/>
           <include name="openWWebsite"/>
         </methods>
       </class> <!-- tests.PracticeFormTest -->

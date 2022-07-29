@@ -2,7 +2,7 @@ package common;
 
 
 
-import java.sql.DriverManager;
+//import java.sql.DriverManager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -11,12 +11,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TestBase {
+public class TestBasic {
 	public WebDriver driver;
 
 	public void openWebsite(String url) {
 		System.setProperty("webdriver.chrome.driver",
-				"D:\\06_AutomationProject\\01Tools\\chromedriver.exe");
+				"C:\\Users\\truyendtt\\Documents\\GitHub\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(url);
 		driver.manage().window().maximize();
@@ -34,7 +34,7 @@ public class TestBase {
 		
 //		js.executeScript("arguments[0].scrollIntoView(true);", iframe);
 	}
-	public void zoomWidown () {
+	public void setWidown () {
 		Dimension dm= new Dimension(700,1000);
 		driver.manage().window().setSize(dm);
 	}
