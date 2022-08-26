@@ -13,9 +13,12 @@ import org.testng.annotations.BeforeMethod;
 
 
 import Pages.AutomationPracticeFormPage;
+import Pages.ButtonsPage;
+import Pages.ElementPage;
 import Pages.FormPage;
 import Pages.HomePage;
 import Pages.ThanksForSubmittingPage;
+import Pages.WebTablesPage;
 import common.TestBasic;
 
 public class PracticeFormTest {
@@ -81,12 +84,27 @@ public class PracticeFormTest {
 				//automationPracticeFormPage.submitFail();
 				//assertEquals(automationPracticeFormPage.submitFail(), "true");
 			}*/
-			public void drapAnhDrop() {
+		/*	public void drapAnhDrop() {
 				HomePage homePage = new HomePage(testBase.driver);
 				FormPage formPage = homePage.clickFormItem();
 				AutomationPracticeFormPage automationPracticeFormPage = formPage.clickOnFormItem();
 				automationPracticeFormPage.scrollBrower();
 				automationPracticeFormPage.get();
+			}
+			public void searchSuccessfully() {
+				String SearchText= "Cierra";
+				HomePage homePage = new HomePage(testBase.driver);
+				FormPage formPage = homePage.clickFormItem();
+				ElementPage elementPage= formPage.clickElementItem();
+				WebTablesPage webTablesPage = elementPage.clickWebTableItem();
+				webTablesPage.searchCustomer(SearchText);
+			}*/
+			public void clickButtonSuccessfully() {
+				HomePage homePage = new HomePage(testBase.driver);
+				FormPage formPage = homePage.clickFormItem();
+				ElementPage elementPage= formPage.clickElementItem1();
+				ButtonsPage buttonPage = elementPage.clickButtonsItem();
+				buttonPage.clickButtons();
 			}
 }
 

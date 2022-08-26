@@ -2,7 +2,10 @@ package common;
 
 
 
-//import java.sql.DriverManager;
+import java.util.ArrayList;
+import java.util.List;
+
+import java.sql.DriverManager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -29,9 +32,7 @@ public class TestBasic {
 		
 //		JavascriptExecutor js= (JavascriptExecutor) driver;
 		WebElement iframe= driver.findElement(element);
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", iframe);
-
-		
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", iframe);	
 //		js.executeScript("arguments[0].scrollIntoView(true);", iframe);
 	}
 	public void setWidown () {
@@ -45,5 +46,17 @@ public class TestBasic {
 		return result;
 
 	}
-	
+	public ArrayList<String> getColumnValuesList(By columnLocator){
+		   ArrayList<String> columnValuesList = new ArrayList();
+		   
+		   List<WebElement> columnElements =  driver.findElements(columnLocator);
+		   
+		   for (WebElement e : columnElements){//for each => chỉ áp dụng cho danh sách
+		    String columnValue = e.getText();
+		    columnValuesList.add(columnValue);
+		   }
+		   return columnValuesList;
+		    
+	}
+
 }

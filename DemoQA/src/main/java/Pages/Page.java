@@ -16,4 +16,9 @@ public class Page {
 				Select selectOption = new Select(driverWeb.findElement(element));
 				selectOption.selectByVisibleText(textInput);
 			}
+			public String cutString(String st) {
+				String A[] = st.split(":");
+				String result= A[1];
+				return result;
+			}
 }
