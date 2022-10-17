@@ -1,23 +1,14 @@
 package tests;
 
 import static org.testng.Assert.assertEquals;
-
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import Pages.CheckBoxPage;
 import Pages.ElementPage;
-import Pages.FormPage;
 import Pages.HomePage;
-import common.TestBasic;
 
-public class CheckBoxTest {
-	TestBasic testBase = new TestBasic();
-	//TC01: [CheckBox] Verify check box correctly.
-	@BeforeMethod
-	public void openWWebsite() {
-		testBase.openWebsite("https://demoqa.com/");
-	}
+
+public class CheckBoxTest extends TestCase {
+	
 	//@AfterMethod
 	public void closeBrower() {
 		testBase.driver.quit();

@@ -39,7 +39,7 @@ public class PracticeFormTest {
 				testBase.driver.quit();
 			}
 			@Test
-			/*public void submitDataSuccessfully() throws IOException {
+			public void submitDataSuccessfully() throws IOException {
 				HomePage homePage = new HomePage(testBase.driver);
 				FormPage formPage = homePage.clickFormItem();
 	
@@ -74,7 +74,7 @@ public class PracticeFormTest {
 				Assert.assertEquals(thanksForSubmittingPage.GetStateOfCityFromForm(),inputStateAndCity);
 			} 
 			//TC03: 
-		/*	public void submitDataFail() {
+			public void submitDataFail() {
 				HomePage homePage = new HomePage(testBase.driver);
 				FormPage formPage = homePage.clickFormItem();
 				AutomationPracticeFormPage automationPracticeFormPage = formPage.clickOnFormItem();
@@ -83,8 +83,8 @@ public class PracticeFormTest {
 				automationPracticeFormPage.getBoderColor();
 				//automationPracticeFormPage.submitFail();
 				//assertEquals(automationPracticeFormPage.submitFail(), "true");
-			}*/
-		/*	public void drapAnhDrop() {
+			}
+			public void drapAnhDrop() {
 				HomePage homePage = new HomePage(testBase.driver);
 				FormPage formPage = homePage.clickFormItem();
 				AutomationPracticeFormPage automationPracticeFormPage = formPage.clickOnFormItem();
@@ -95,10 +95,10 @@ public class PracticeFormTest {
 				String SearchText= "Cierra";
 				HomePage homePage = new HomePage(testBase.driver);
 				FormPage formPage = homePage.clickFormItem();
-				ElementPage elementPage= formPage.clickElementItem();
+				ElementPage elementPage= formPage.clickElementItem1();
 				WebTablesPage webTablesPage = elementPage.clickWebTableItem();
 				webTablesPage.searchCustomer(SearchText);
-			}*/
+			}
 			public void clickButtonSuccessfully() {
 				HomePage homePage = new HomePage(testBase.driver);
 				FormPage formPage = homePage.clickFormItem();
