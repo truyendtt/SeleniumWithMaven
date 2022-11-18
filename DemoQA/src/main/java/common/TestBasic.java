@@ -19,31 +19,35 @@ public class TestBasic {
 	public  static final String FILE_CONFIG="\\config\\ProjectConfiguration.properties";
 	public void openWebsite(String browser) {
 		if (browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.gecko",
-					readConfigValueByKey("gecko_driver"));
+			System.setProperty("webdriver.gecko.driver", readConfigValueByKey("gecko_driver"));
 			driver = new FirefoxDriver();
-			System.out.print("firefoxff" + driver);
+			System.out.println("ffdriver    " + driver);
 		} else if(browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					readConfigValueByKey("chrome_dirver"));
-			driver = new ChromeDriver();
+				System.setProperty("webdriver.chrome.driver", readConfigValueByKey("chrome_dirver"));
+				driver = new ChromeDriver();
+				System.out.println("cdriver    " + driver);
 		}
-		
+
 		driver.get(readConfigValueByKey("url"));
 		driver.manage().window().maximize();
 	}
-	public String readConfigValueByKey(String Key) {
+	public String readConfigValueByKey(String key) {
 		String resultValue = "";
+
 		Properties properties = new Properties();
-		InputStream inputStream=null;
-		String currentDir= System.getProperty("user.dir");
+		InputStream inputStream = null;
+		String currentDir = System.getProperty("user.dir");
+		System.out.println("curentdir:   " + currentDir);
 		try {
 			inputStream = new FileInputStream(currentDir + FILE_CONFIG);
 			properties.load(inputStream);
-			resultValue = properties.getProperty(Key);
+			System.out.println("fileConfig:   " + currentDir + FILE_CONFIG);
+			resultValue = properties.getProperty(key);
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		return resultValue;
 	}
 

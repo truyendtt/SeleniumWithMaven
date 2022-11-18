@@ -9,7 +9,6 @@ public class Page {
 	
 			protected WebDriver driverWeb;
 			public Page (WebDriver dr) {
-				super();
 				this.driverWeb = dr;
 			}
 			public void selectElementFromDropdown(By element, String textInput) {

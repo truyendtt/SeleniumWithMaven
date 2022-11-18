@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-SystemTest" class="navigator-link ">
-                    <span>C:\Users\truyendtt\Downloads\SeleniumWithMaven\DemoQA\src\main\resources\TestMultipleBrowser.xml</span>
+                    <span>C:\Users\truyendtt\Documents\GitHub\SeleniumWithMaven_v2\DemoQA\src\main\resources\TestMultipleBrowser.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  2 skipped,  </span>
+                    <span class="method-stats">2 methods,  1 skipped,  1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -107,12 +107,21 @@
                         <a href="#" panel-name="suite-SystemTest" title="tests.CheckBoxTest" class="method navigator-link" hash-for-method="clickCheckBoxSuccessfully">clickCheckBoxSuccessfully</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                    </div> <!-- method-list-content skipped suite-SystemTest -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-SystemTest" class="hide-methods passed suite-SystemTest"> (hide)</a> <!-- hide-methods passed suite-SystemTest -->
+                      <a href="#" panel-name="suite-SystemTest" class="show-methods passed suite-SystemTest"> (show)</a> <!-- show-methods passed suite-SystemTest -->
+                    </span>
+                    <div class="method-list-content passed suite-SystemTest">
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-SystemTest" title="tests.CheckBoxTest" class="method navigator-link" hash-for-method="clickCheckBoxSuccessfully">clickCheckBoxSuccessfully</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-SystemTest -->
+                    </div> <!-- method-list-content passed suite-SystemTest -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -135,43 +144,26 @@
                   <a name="clickCheckBoxSuccessfully">
                   </a> <!-- clickCheckBoxSuccessfully -->
                   <span class="method-name">clickCheckBoxSuccessfully</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:137)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:106)
-	at common.TestBasic.openWebsite(TestBasic.java:24)
-	at tests.TestCase.openWeb(TestCase.java:14)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 108
+Current browser version is 107.0.5304.107 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
 System info: host: &apos;PANTHER-TRUYEND&apos;, ip: &apos;192.168.135.149&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-	... 39 more
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="clickCheckBoxSuccessfully">
-                  </a> <!-- clickCheckBoxSuccessfully -->
-                  <span class="method-name">clickCheckBoxSuccessfully</span>
-                  <div class="stack-trace">java.lang.IllegalStateException: The driver executable must exist: C:\Users\truyendtt\Downloads\SeleniumWithMaven\DemoQA
-	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:342)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:147)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:142)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:38)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:231)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:127)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:106)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:93)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:48)
-	at common.TestBasic.openWebsite(TestBasic.java:29)
+	at common.TestBasic.openWebsite(TestBasic.java:27)
 	at tests.TestCase.openWeb(TestCase.java:14)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 31 stack frames
@@ -180,10 +172,25 @@ Driver info: driver.version: FirefoxDriver
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-SystemTest-class-skipped -->
+          <div class="suite-SystemTest-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.CheckBoxTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickCheckBoxSuccessfully">
+                  </a> <!-- clickCheckBoxSuccessfully -->
+                  <span class="method-name">clickCheckBoxSuccessfully</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SystemTest-class-passed -->
         </div> <!-- panel SystemTest -->
         <div panel-name="test-xml-SystemTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\truyendtt\Downloads\SeleniumWithMaven\DemoQA\src\main\resources\TestMultipleBrowser.xml</span>
+            <span class="header-content">C:\Users\truyendtt\Documents\GitHub\SeleniumWithMaven_v2\DemoQA\src\main\resources\TestMultipleBrowser.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -254,7 +261,7 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'clickCheckBoxSuccessfully')
 data.setCell(0, 2, 'tests.CheckBoxTest')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 1029);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'clickCheckBoxSuccessfully')
 data.setCell(1, 2, 'tests.CheckBoxTest')
@@ -263,7 +270,7 @@ window.suiteTableData['SystemTest']= { tableData: data, tableDiv: 'times-div-Sys
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-SystemTest">
               </div> <!-- times-div-SystemTest -->
             </div> <!-- times-div -->
@@ -291,24 +298,22 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">tests.CheckBoxTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">openWeb(firefox)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">clickCheckBoxSuccessfully</span>
-                <span class="method-start">607 ms</span>
+                <span class="method-start">9565 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">openWeb(chrome)</span>
-                <span class="method-start">666 ms</span>
+                <span class="method-start">10642 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">clickCheckBoxSuccessfully</span>
-                <span class="method-start">674 ms</span>
+                <span class="method-start">12230 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
